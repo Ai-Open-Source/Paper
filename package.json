@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development multiscript yarn server:dev + yarn client:dev",
-    "build": "cross-env NODE_ENV=production yarn client:build",
-    "start": "node .",
-    "server:dev": "ts-node-dev server",
-    "client:dev": "cd client && webpack-dev-server --mode=development --display=minimal",
-    "client:build": "cd client && webpack --mode production",
+    "dev": "multiscript yarn server:dev + yarn client:dev",
+    "build": "multiscript yarn client:build + yarn server:build",
+    "start": "node dist/server",
+    "server:dev": "cross-env NODE_ENV=development ts-node-dev server",
+    "server:build": "cross-env NODE_ENV=production tsc",
+    "client:dev": "cross-env NODE_ENV=development cd client && webpack-dev-server --mode=development --display=minimal",
+    "client:build": "cross-env NODE_ENV=production webpack --config ./client/webpack.config.js --mode production",
     "lint": "eslint --fix --ext .js,.vue,.ts server client/src"
   },
   "dependencies": {

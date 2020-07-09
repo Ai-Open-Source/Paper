@@ -1,3 +1,5 @@
+import { DiscordConfig } from "./discord"
+
 export interface Config {
   database?: {
     url: string
@@ -17,13 +19,7 @@ export interface Config {
     url: string
   }
 
-  discord?: {
-    scope: string[]
-    redirectUri: string
-    botToken: string
-    clientId: string
-    clientSecret: string
-  }
+  discord?: DiscordConfig
 
   firebase?: {
     apiKey: string

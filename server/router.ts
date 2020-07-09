@@ -27,8 +27,8 @@ export default (props: Props): void => {
   router.use('/api', api(props))
 
   router.get('*', ctx => {
-    const file = path.join(__dirname, '../dist/client', ctx.path)
-    const index = path.join(__dirname, '../dist/client/index.html')
+    const file = path.join(__dirname, '../client/dist', ctx.path)
+    const index = path.join(__dirname, '../client/dist/index.html')
 
     if (fs.existsSync(index)) {
       const result = ctx.path === '/' || !fs.existsSync(file) ? index : file

@@ -19,7 +19,7 @@ module.exports = () => ({
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
-      template: './src/index.pug',
+      template: './client/src/index.pug',
     }),
 
     new VueLoaderPlugin(),
@@ -154,11 +154,11 @@ module.exports = () => ({
   },
 
   entry: {
-    app: './src/index.ts',
+    app: './client/src/index.ts',
   },
 
   output: {
-    path: path.resolve(__dirname, '..', 'dist', 'client'),
+    path: path.resolve(__dirname, 'dist'),
     filename: "[name].bundle.js",
   },
 
