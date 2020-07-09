@@ -15,8 +15,8 @@ A custom media publishing platform.
 
 ## installation
 ```
-git clone https://github.com/Andr3wRiv3rs/fos
-cd fos
+git clone https://github.com/Ai-Open-Source/Paper
+cd Paper
 yarn
 ```
 
