@@ -1,4 +1,5 @@
-# FOS
+# Paper
+A custom media publishing platform.
 
 ## prerequisites
 - node.js 12+
